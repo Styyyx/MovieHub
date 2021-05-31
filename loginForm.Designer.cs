@@ -66,8 +66,31 @@
             this.txt_usernameSignup = new System.Windows.Forms.TextBox();
             this.txt_lastName = new System.Windows.Forms.TextBox();
             this.txt_firstName = new System.Windows.Forms.TextBox();
+            this.panel_home = new System.Windows.Forms.Panel();
+            this.pictureBox_account = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.link_signOut = new System.Windows.Forms.LinkLabel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel_account = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.lbl_mobileNum = new System.Windows.Forms.Label();
+            this.lbl_changeEmail = new System.Windows.Forms.Label();
+            this.lbl_changePassword = new System.Windows.Forms.Label();
+            this.lbl_changeMobileNum = new System.Windows.Forms.Label();
+            this.lbl_changePlan = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.lbl_plan = new System.Windows.Forms.Label();
+            this.lbl_backAccount = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             label6 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
@@ -78,8 +101,15 @@
             this.panel_signup.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel_home.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_account)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel_account.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -262,9 +292,9 @@
             this.panel_signup.Controls.Add(this.txt_usernameSignup);
             this.panel_signup.Controls.Add(this.txt_lastName);
             this.panel_signup.Controls.Add(this.txt_firstName);
-            this.panel_signup.Location = new System.Drawing.Point(12, 12);
+            this.panel_signup.Location = new System.Drawing.Point(0, 0);
             this.panel_signup.Name = "panel_signup";
-            this.panel_signup.Size = new System.Drawing.Size(960, 637);
+            this.panel_signup.Size = new System.Drawing.Size(984, 661);
             this.panel_signup.TabIndex = 1;
             // 
             // link_login
@@ -535,12 +565,37 @@
             label17.TabIndex = 3;
             label17.Text = "You have an account?";
             // 
+            // panel_home
+            // 
+            this.panel_home.Controls.Add(this.dataGridView2);
+            this.panel_home.Controls.Add(this.dataGridView1);
+            this.panel_home.Controls.Add(this.label19);
+            this.panel_home.Controls.Add(this.label18);
+            this.panel_home.Controls.Add(this.pictureBox4);
+            this.panel_home.Controls.Add(this.link_signOut);
+            this.panel_home.Controls.Add(this.pictureBox_account);
+            this.panel_home.Location = new System.Drawing.Point(0, 0);
+            this.panel_home.Name = "panel_home";
+            this.panel_home.Size = new System.Drawing.Size(984, 661);
+            this.panel_home.TabIndex = 11;
+            // 
+            // pictureBox_account
+            // 
+            this.pictureBox_account.Image = global::MovieHub.Properties.Resources.profile_icon_png_898;
+            this.pictureBox_account.Location = new System.Drawing.Point(926, 86);
+            this.pictureBox_account.Name = "pictureBox_account";
+            this.pictureBox_account.Size = new System.Drawing.Size(46, 48);
+            this.pictureBox_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_account.TabIndex = 0;
+            this.pictureBox_account.TabStop = false;
+            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___white;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
+            this.pictureBox2.Location = new System.Drawing.Point(0, -1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(960, 66);
+            this.pictureBox2.Size = new System.Drawing.Size(984, 66);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
@@ -555,12 +610,259 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // link_signOut
+            // 
+            this.link_signOut.AutoSize = true;
+            this.link_signOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.link_signOut.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.link_signOut.LinkColor = System.Drawing.Color.Red;
+            this.link_signOut.Location = new System.Drawing.Point(907, 137);
+            this.link_signOut.Name = "link_signOut";
+            this.link_signOut.Size = new System.Drawing.Size(65, 17);
+            this.link_signOut.TabIndex = 10;
+            this.link_signOut.TabStop = true;
+            this.link_signOut.Text = "Sign Out";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(984, 66);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(34, 160);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 24);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Favorites";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(500, 160);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(146, 24);
+            this.label19.TabIndex = 12;
+            this.label19.Text = "Movie Library";
+            // 
+            // panel_account
+            // 
+            this.panel_account.Controls.Add(this.button1);
+            this.panel_account.Controls.Add(this.lbl_backAccount);
+            this.panel_account.Controls.Add(this.lbl_plan);
+            this.panel_account.Controls.Add(this.lbl_mobileNum);
+            this.panel_account.Controls.Add(this.lbl_password);
+            this.panel_account.Controls.Add(this.lbl_email);
+            this.panel_account.Controls.Add(this.lbl_changePlan);
+            this.panel_account.Controls.Add(this.lbl_changeMobileNum);
+            this.panel_account.Controls.Add(this.lbl_changePassword);
+            this.panel_account.Controls.Add(this.lbl_changeEmail);
+            this.panel_account.Controls.Add(this.label29);
+            this.panel_account.Controls.Add(this.label21);
+            this.panel_account.Controls.Add(this.label20);
+            this.panel_account.Controls.Add(this.pictureBox5);
+            this.panel_account.Location = new System.Drawing.Point(0, 0);
+            this.panel_account.Name = "panel_account";
+            this.panel_account.Size = new System.Drawing.Size(984, 661);
+            this.panel_account.TabIndex = 13;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
+            this.pictureBox5.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(984, 66);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 12;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Red;
+            this.label20.Location = new System.Drawing.Point(112, 184);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(169, 24);
+            this.label20.TabIndex = 13;
+            this.label20.Text = "Account Details";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(157, 233);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(115, 22);
+            this.label21.TabIndex = 14;
+            this.label21.Text = "Membership";
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.ForeColor = System.Drawing.Color.White;
+            this.lbl_email.Location = new System.Drawing.Point(206, 278);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(49, 17);
+            this.lbl_email.TabIndex = 14;
+            this.lbl_email.Text = "Email:";
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.ForeColor = System.Drawing.Color.White;
+            this.lbl_password.Location = new System.Drawing.Point(206, 314);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(78, 17);
+            this.lbl_password.TabIndex = 14;
+            this.lbl_password.Text = "Password:";
+            // 
+            // lbl_mobileNum
+            // 
+            this.lbl_mobileNum.AutoSize = true;
+            this.lbl_mobileNum.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mobileNum.ForeColor = System.Drawing.Color.White;
+            this.lbl_mobileNum.Location = new System.Drawing.Point(206, 352);
+            this.lbl_mobileNum.Name = "lbl_mobileNum";
+            this.lbl_mobileNum.Size = new System.Drawing.Size(109, 17);
+            this.lbl_mobileNum.TabIndex = 14;
+            this.lbl_mobileNum.Text = "Mobile Number:";
+            // 
+            // lbl_changeEmail
+            // 
+            this.lbl_changeEmail.AutoSize = true;
+            this.lbl_changeEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_changeEmail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_changeEmail.ForeColor = System.Drawing.Color.Red;
+            this.lbl_changeEmail.Location = new System.Drawing.Point(584, 278);
+            this.lbl_changeEmail.Name = "lbl_changeEmail";
+            this.lbl_changeEmail.Size = new System.Drawing.Size(154, 17);
+            this.lbl_changeEmail.TabIndex = 14;
+            this.lbl_changeEmail.Text = "Change account email";
+            // 
+            // lbl_changePassword
+            // 
+            this.lbl_changePassword.AutoSize = true;
+            this.lbl_changePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_changePassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_changePassword.ForeColor = System.Drawing.Color.Red;
+            this.lbl_changePassword.Location = new System.Drawing.Point(584, 314);
+            this.lbl_changePassword.Name = "lbl_changePassword";
+            this.lbl_changePassword.Size = new System.Drawing.Size(127, 17);
+            this.lbl_changePassword.TabIndex = 14;
+            this.lbl_changePassword.Text = "Change password";
+            // 
+            // lbl_changeMobileNum
+            // 
+            this.lbl_changeMobileNum.AutoSize = true;
+            this.lbl_changeMobileNum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_changeMobileNum.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_changeMobileNum.ForeColor = System.Drawing.Color.Red;
+            this.lbl_changeMobileNum.Location = new System.Drawing.Point(584, 352);
+            this.lbl_changeMobileNum.Name = "lbl_changeMobileNum";
+            this.lbl_changeMobileNum.Size = new System.Drawing.Size(160, 17);
+            this.lbl_changeMobileNum.TabIndex = 14;
+            this.lbl_changeMobileNum.Text = "Change mobile number";
+            // 
+            // lbl_changePlan
+            // 
+            this.lbl_changePlan.AutoSize = true;
+            this.lbl_changePlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_changePlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_changePlan.ForeColor = System.Drawing.Color.Red;
+            this.lbl_changePlan.Location = new System.Drawing.Point(584, 461);
+            this.lbl_changePlan.Name = "lbl_changePlan";
+            this.lbl_changePlan.Size = new System.Drawing.Size(90, 17);
+            this.lbl_changePlan.TabIndex = 14;
+            this.lbl_changePlan.Text = "Change plan";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Location = new System.Drawing.Point(157, 418);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(110, 22);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Plan Details";
+            // 
+            // lbl_plan
+            // 
+            this.lbl_plan.AutoSize = true;
+            this.lbl_plan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_plan.ForeColor = System.Drawing.Color.White;
+            this.lbl_plan.Location = new System.Drawing.Point(206, 464);
+            this.lbl_plan.Name = "lbl_plan";
+            this.lbl_plan.Size = new System.Drawing.Size(41, 17);
+            this.lbl_plan.TabIndex = 14;
+            this.lbl_plan.Text = "Plan:";
+            // 
+            // lbl_backAccount
+            // 
+            this.lbl_backAccount.AutoSize = true;
+            this.lbl_backAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_backAccount.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_backAccount.ForeColor = System.Drawing.Color.Red;
+            this.lbl_backAccount.Location = new System.Drawing.Point(35, 101);
+            this.lbl_backAccount.Name = "lbl_backAccount";
+            this.lbl_backAccount.Size = new System.Drawing.Size(50, 18);
+            this.lbl_backAccount.TabIndex = 15;
+            this.lbl_backAccount.Text = "BACK";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(587, 515);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(227, 37);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Delete Account";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(38, 195);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(437, 432);
+            this.dataGridView1.TabIndex = 13;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(504, 195);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(443, 432);
+            this.dataGridView2.TabIndex = 13;
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel_home);
+            this.Controls.Add(this.panel_account);
             this.Controls.Add(this.panel_signup);
             this.Controls.Add(this.panel_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -578,8 +880,17 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel_home.ResumeLayout(false);
+            this.panel_home.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_account)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel_account.ResumeLayout(false);
+            this.panel_account.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -619,6 +930,29 @@
         private System.Windows.Forms.Button btn_createAccount;
         private System.Windows.Forms.LinkLabel link_login;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel_home;
+        private System.Windows.Forms.PictureBox pictureBox_account;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel link_signOut;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel_account;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lbl_plan;
+        private System.Windows.Forms.Label lbl_mobileNum;
+        private System.Windows.Forms.Label lbl_password;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.Label lbl_changePlan;
+        private System.Windows.Forms.Label lbl_changeMobileNum;
+        private System.Windows.Forms.Label lbl_changePassword;
+        private System.Windows.Forms.Label lbl_changeEmail;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lbl_backAccount;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
