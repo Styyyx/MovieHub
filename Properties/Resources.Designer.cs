@@ -89,5 +89,15 @@ namespace MovieHub.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movie_hub_logo_badge___white {
+            get {
+                object obj = ResourceManager.GetObject("movie_hub_logo_badge - white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

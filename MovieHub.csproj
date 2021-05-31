@@ -89,5 +89,8 @@
   <ItemGroup>
     <None Include="Resources\movie_hub_logo - white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie_hub_logo_badge - white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
