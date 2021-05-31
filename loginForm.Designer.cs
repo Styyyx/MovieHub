@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,10 +52,20 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(294, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(360, 437);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MovieHub.Properties.Resources.movie_hub_logo___white;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(354, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -65,7 +75,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(193, 353);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(59, 17);
-            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign Up";
             // 
@@ -79,7 +89,7 @@
             this.button1.Location = new System.Drawing.Point(69, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(227, 37);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "LOGIN";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -92,7 +102,7 @@
             this.textBox2.Location = new System.Drawing.Point(69, 248);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 25);
-            this.textBox2.TabIndex = 1;
+            this.textBox2.TabIndex = 2;
             this.textBox2.UseSystemPasswordChar = true;
             // 
             // label3
@@ -139,22 +149,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MovieHub.Properties.Resources.movie_hub_logo___white;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
-            this.ClientSize = new System.Drawing.Size(384, 461);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "loginForm";
