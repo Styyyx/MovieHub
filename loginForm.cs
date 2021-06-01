@@ -281,6 +281,8 @@ namespace MovieHub
         {
             panel_login.Visible = true;
             panel_home.Visible = false;
+            txt_usernameLogin.Text = "";
+            txt_passwordLogin.Text = "";
         }
     }
 }
