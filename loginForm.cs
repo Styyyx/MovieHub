@@ -290,5 +290,15 @@ namespace MovieHub
         {
             panel_changePassword.Visible = true;
         }
+
+        private void lbl_changeMobileNum_Click(object sender, EventArgs e)
+        {
+            panel_changeMobile.Visible = true;
+        }
+
+        private void lbl_changePlan_Click(object sender, EventArgs e)
+        {
+            panel_changePlan.Visible = true;
+        }
     }
 }

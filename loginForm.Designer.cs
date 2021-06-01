@@ -103,6 +103,14 @@
             this.txt_newMobile = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.panel_changePlan = new System.Windows.Forms.Panel();
+            this.btn_cancelPlan = new System.Windows.Forms.Button();
+            this.btn_savePlan = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_signup.SuspendLayout();
@@ -118,6 +126,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel_changePassword.SuspendLayout();
             this.panel_changeMobile.SuspendLayout();
+            this.panel_changePlan.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -817,6 +827,7 @@
             this.lbl_changePlan.Size = new System.Drawing.Size(90, 17);
             this.lbl_changePlan.TabIndex = 14;
             this.lbl_changePlan.Text = "Change plan";
+            this.lbl_changePlan.Click += new System.EventHandler(this.lbl_changePlan_Click);
             // 
             // lbl_changeMobileNum
             // 
@@ -829,6 +840,7 @@
             this.lbl_changeMobileNum.Size = new System.Drawing.Size(160, 17);
             this.lbl_changeMobileNum.TabIndex = 14;
             this.lbl_changeMobileNum.Text = "Change mobile number";
+            this.lbl_changeMobileNum.Click += new System.EventHandler(this.lbl_changeMobileNum_Click);
             // 
             // lbl_changePassword
             // 
@@ -1037,14 +1049,117 @@
             this.label26.TabIndex = 14;
             this.label26.Text = "Change Mobile Number";
             // 
+            // panel_changePlan
+            // 
+            this.panel_changePlan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_changePlan.Controls.Add(this.groupBox2);
+            this.panel_changePlan.Controls.Add(this.btn_cancelPlan);
+            this.panel_changePlan.Controls.Add(this.btn_savePlan);
+            this.panel_changePlan.Controls.Add(this.label28);
+            this.panel_changePlan.Location = new System.Drawing.Point(228, 201);
+            this.panel_changePlan.Name = "panel_changePlan";
+            this.panel_changePlan.Size = new System.Drawing.Size(529, 258);
+            this.panel_changePlan.TabIndex = 21;
+            this.panel_changePlan.Visible = false;
+            // 
+            // btn_cancelPlan
+            // 
+            this.btn_cancelPlan.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelPlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelPlan.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelPlan.Location = new System.Drawing.Point(292, 179);
+            this.btn_cancelPlan.Name = "btn_cancelPlan";
+            this.btn_cancelPlan.Size = new System.Drawing.Size(153, 37);
+            this.btn_cancelPlan.TabIndex = 19;
+            this.btn_cancelPlan.Text = "CANCEL";
+            this.btn_cancelPlan.UseVisualStyleBackColor = false;
+            // 
+            // btn_savePlan
+            // 
+            this.btn_savePlan.BackColor = System.Drawing.Color.Red;
+            this.btn_savePlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_savePlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savePlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savePlan.ForeColor = System.Drawing.Color.White;
+            this.btn_savePlan.Location = new System.Drawing.Point(72, 179);
+            this.btn_savePlan.Name = "btn_savePlan";
+            this.btn_savePlan.Size = new System.Drawing.Size(153, 37);
+            this.btn_savePlan.TabIndex = 17;
+            this.btn_savePlan.Text = "SAVE";
+            this.btn_savePlan.UseVisualStyleBackColor = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Red;
+            this.label28.Location = new System.Drawing.Point(47, 40);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(272, 24);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "Change Subscription Plan";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(73, 80);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(374, 71);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(255, 26);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(86, 21);
+            this.radioButton1.TabIndex = 9;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Premium";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(139, 26);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 21);
+            this.radioButton2.TabIndex = 8;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Standard";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(35, 26);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(63, 21);
+            this.radioButton3.TabIndex = 7;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Basic";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.panel_changeMobile);
             this.Controls.Add(this.panel_account);
+            this.Controls.Add(this.panel_changePlan);
+            this.Controls.Add(this.panel_changeMobile);
             this.Controls.Add(this.panel_changePassword);
             this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
@@ -1078,6 +1193,10 @@
             this.panel_changePassword.PerformLayout();
             this.panel_changeMobile.ResumeLayout(false);
             this.panel_changeMobile.PerformLayout();
+            this.panel_changePlan.ResumeLayout(false);
+            this.panel_changePlan.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1159,6 +1278,14 @@
         private System.Windows.Forms.TextBox txt_newMobile;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel_changePlan;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Button btn_cancelPlan;
+        private System.Windows.Forms.Button btn_savePlan;
+        private System.Windows.Forms.Label label28;
     }
 }
 
