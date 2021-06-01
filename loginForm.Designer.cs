@@ -97,6 +97,12 @@
             this.txt_newEmail = new System.Windows.Forms.TextBox();
             this.btn_savePassword = new System.Windows.Forms.Button();
             this.btn_cancelPassword = new System.Windows.Forms.Button();
+            this.panel_changeMobile = new System.Windows.Forms.Panel();
+            this.btn_cancelMobile = new System.Windows.Forms.Button();
+            this.btn_saveMobile = new System.Windows.Forms.Button();
+            this.txt_newMobile = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_signup.SuspendLayout();
@@ -111,6 +117,7 @@
             this.panel_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel_changePassword.SuspendLayout();
+            this.panel_changeMobile.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -955,14 +962,90 @@
             this.btn_cancelPassword.Text = "CANCEL";
             this.btn_cancelPassword.UseVisualStyleBackColor = false;
             // 
+            // panel_changeMobile
+            // 
+            this.panel_changeMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_changeMobile.Controls.Add(this.btn_cancelMobile);
+            this.panel_changeMobile.Controls.Add(this.btn_saveMobile);
+            this.panel_changeMobile.Controls.Add(this.txt_newMobile);
+            this.panel_changeMobile.Controls.Add(this.label25);
+            this.panel_changeMobile.Controls.Add(this.label26);
+            this.panel_changeMobile.Location = new System.Drawing.Point(215, 214);
+            this.panel_changeMobile.Name = "panel_changeMobile";
+            this.panel_changeMobile.Size = new System.Drawing.Size(529, 258);
+            this.panel_changeMobile.TabIndex = 20;
+            this.panel_changeMobile.Visible = false;
+            // 
+            // btn_cancelMobile
+            // 
+            this.btn_cancelMobile.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelMobile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelMobile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelMobile.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelMobile.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelMobile.Location = new System.Drawing.Point(281, 166);
+            this.btn_cancelMobile.Name = "btn_cancelMobile";
+            this.btn_cancelMobile.Size = new System.Drawing.Size(153, 37);
+            this.btn_cancelMobile.TabIndex = 19;
+            this.btn_cancelMobile.Text = "CANCEL";
+            this.btn_cancelMobile.UseVisualStyleBackColor = false;
+            // 
+            // btn_saveMobile
+            // 
+            this.btn_saveMobile.BackColor = System.Drawing.Color.Red;
+            this.btn_saveMobile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_saveMobile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_saveMobile.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_saveMobile.ForeColor = System.Drawing.Color.White;
+            this.btn_saveMobile.Location = new System.Drawing.Point(89, 166);
+            this.btn_saveMobile.Name = "btn_saveMobile";
+            this.btn_saveMobile.Size = new System.Drawing.Size(153, 37);
+            this.btn_saveMobile.TabIndex = 17;
+            this.btn_saveMobile.Text = "SAVE";
+            this.btn_saveMobile.UseVisualStyleBackColor = false;
+            // 
+            // txt_newMobile
+            // 
+            this.txt_newMobile.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txt_newMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_newMobile.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_newMobile.ForeColor = System.Drawing.Color.White;
+            this.txt_newMobile.Location = new System.Drawing.Point(224, 106);
+            this.txt_newMobile.Name = "txt_newMobile";
+            this.txt_newMobile.Size = new System.Drawing.Size(227, 25);
+            this.txt_newMobile.TabIndex = 16;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(76, 112);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(142, 17);
+            this.label25.TabIndex = 15;
+            this.label25.Text = "New Mobile Number:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(46, 55);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(244, 24);
+            this.label26.TabIndex = 14;
+            this.label26.Text = "Change Mobile Number";
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.panel_changePassword);
+            this.Controls.Add(this.panel_changeMobile);
             this.Controls.Add(this.panel_account);
+            this.Controls.Add(this.panel_changePassword);
             this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
             this.Controls.Add(this.panel_home);
@@ -993,6 +1076,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel_changePassword.ResumeLayout(false);
             this.panel_changePassword.PerformLayout();
+            this.panel_changeMobile.ResumeLayout(false);
+            this.panel_changeMobile.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1068,6 +1153,12 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btn_cancelPassword;
+        private System.Windows.Forms.Panel panel_changeMobile;
+        private System.Windows.Forms.Button btn_cancelMobile;
+        private System.Windows.Forms.Button btn_saveMobile;
+        private System.Windows.Forms.TextBox txt_newMobile;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
     }
 }
 
