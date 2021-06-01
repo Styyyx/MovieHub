@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             this.txt_lastName = new System.Windows.Forms.TextBox();
             this.txt_firstName = new System.Windows.Forms.TextBox();
             this.panel_home = new System.Windows.Forms.Panel();
+            this.btn_addWatched = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -643,6 +645,7 @@
             // 
             // panel_home
             // 
+            this.panel_home.Controls.Add(this.btn_addWatched);
             this.panel_home.Controls.Add(this.dataGridView1);
             this.panel_home.Controls.Add(this.label19);
             this.panel_home.Controls.Add(this.label18);
@@ -656,13 +659,28 @@
             this.panel_home.TabIndex = 11;
             this.panel_home.Visible = false;
             // 
+            // btn_addWatched
+            // 
+            this.btn_addWatched.BackColor = System.Drawing.Color.Red;
+            this.btn_addWatched.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addWatched.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addWatched.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addWatched.ForeColor = System.Drawing.Color.White;
+            this.btn_addWatched.Location = new System.Drawing.Point(789, 598);
+            this.btn_addWatched.Name = "btn_addWatched";
+            this.btn_addWatched.Size = new System.Drawing.Size(158, 37);
+            this.btn_addWatched.TabIndex = 14;
+            this.btn_addWatched.Text = "Add to watched";
+            this.btn_addWatched.UseVisualStyleBackColor = false;
+            this.btn_addWatched.Click += new System.EventHandler(this.btn_addWatched_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(38, 195);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(437, 432);
+            this.dataGridView1.Size = new System.Drawing.Size(437, 389);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -731,8 +749,7 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(504, 195);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(443, 432);
+            this.dataGridView2.Size = new System.Drawing.Size(443, 386);
             this.dataGridView2.TabIndex = 13;
             // 
             // panel_account
@@ -1252,15 +1269,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel_home);
             this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
-            this.Controls.Add(this.panel_home);
             this.Controls.Add(this.panel_deleteAccount);
             this.Controls.Add(this.panel_account);
             this.Controls.Add(this.panel_changePlan);
             this.Controls.Add(this.panel_changeMobile);
             this.Controls.Add(this.panel_changePassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "loginForm";
             this.ShowIcon = false;
@@ -1390,6 +1408,7 @@
         private System.Windows.Forms.Button btn_cancelDelete;
         private System.Windows.Forms.Button btn_deleteAccount;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button btn_addWatched;
     }
 }
 
