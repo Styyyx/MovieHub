@@ -17,3 +17,13 @@ C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Debug\Mov
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Debug\MovieHub.csproj.GenerateResource.cache
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Debug\MovieHub.exe
 C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Debug\MovieHub.pdb
+D:\Users\reann\Desktop\MovieHub\bin\Debug\MovieHub.exe.config
+D:\Users\reann\Desktop\MovieHub\bin\Debug\MovieHub.exe
+D:\Users\reann\Desktop\MovieHub\bin\Debug\MovieHub.pdb
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.csprojAssemblyReference.cache
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.loginForm.resources
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.Properties.Resources.resources
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.csproj.GenerateResource.cache
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.csproj.CoreCompileInputs.cache
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.exe
+D:\Users\reann\Desktop\MovieHub\obj\Debug\MovieHub.pdb

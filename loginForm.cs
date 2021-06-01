@@ -269,5 +269,12 @@ namespace MovieHub
                 }
             }
         }
+
+        private void lbl_backAccount_Click(object sender, EventArgs e)
+        {
+            panel_home.Visible = true;
+            panel_account.Visible = false;
+            loadHomePanel();
+        }
     }
 }
