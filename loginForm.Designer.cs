@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label label6;
-            System.Windows.Forms.Label label7;
-            System.Windows.Forms.Label label8;
-            System.Windows.Forms.Label label9;
-            System.Windows.Forms.Label label16;
-            System.Windows.Forms.Label label17;
-            System.Windows.Forms.Label label22;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel_login = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.btn_login = new System.Windows.Forms.Button();
             this.txt_passwordLogin = new System.Windows.Forms.TextBox();
@@ -46,7 +43,6 @@
             this.txt_usernameLogin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_signup = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.link_login = new System.Windows.Forms.LinkLabel();
             this.btn_createAccount = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -74,14 +70,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.link_signOut = new System.Windows.Forms.LinkLabel();
-            this.pictureBox_account = new System.Windows.Forms.PictureBox();
             this.panel_account = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lbl_backAccount = new System.Windows.Forms.Label();
             this.lbl_plan = new System.Windows.Forms.Label();
             this.lbl_mobileNum = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_changePlan = new System.Windows.Forms.Label();
             this.lbl_changeMobileNum = new System.Windows.Forms.Label();
@@ -90,96 +85,92 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.radio_AmExpress = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_account = new System.Windows.Forms.PictureBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
-            this.lbl_name = new System.Windows.Forms.Label();
-            label6 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
-            label8 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
-            label16 = new System.Windows.Forms.Label();
-            label17 = new System.Windows.Forms.Label();
-            label22 = new System.Windows.Forms.Label();
             this.panel_login.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_signup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_account)).BeginInit();
             this.panel_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_account)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.ForeColor = System.Drawing.Color.White;
-            label6.Location = new System.Drawing.Point(78, 276);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(80, 17);
-            label6.TabIndex = 3;
-            label6.Text = "First Name";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(78, 276);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 17);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "First Name";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label7.ForeColor = System.Drawing.Color.White;
-            label7.Location = new System.Drawing.Point(274, 276);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(79, 17);
-            label7.TabIndex = 3;
-            label7.Text = "Last Name";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(274, 276);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 17);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "Last Name";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label8.ForeColor = System.Drawing.Color.White;
-            label8.Location = new System.Drawing.Point(78, 349);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(76, 17);
-            label8.TabIndex = 3;
-            label8.Text = "Username";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(78, 349);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 17);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Username";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label9.ForeColor = System.Drawing.Color.White;
-            label9.Location = new System.Drawing.Point(274, 349);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(74, 17);
-            label9.TabIndex = 3;
-            label9.Text = "Password";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(274, 349);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 17);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Password";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label16.ForeColor = System.Drawing.Color.White;
-            label16.Location = new System.Drawing.Point(78, 421);
-            label16.Name = "label16";
-            label16.Size = new System.Drawing.Size(105, 17);
-            label16.TabIndex = 3;
-            label16.Text = "Mobile Number";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(78, 421);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(105, 17);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Mobile Number";
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label17.ForeColor = System.Drawing.Color.White;
-            label17.Location = new System.Drawing.Point(400, 568);
-            label17.Name = "label17";
-            label17.Size = new System.Drawing.Size(151, 17);
-            label17.TabIndex = 3;
-            label17.Text = "You have an account?";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(400, 568);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(151, 17);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "You have an account?";
             // 
             // panel_login
             // 
@@ -196,16 +187,6 @@
             this.panel_login.Name = "panel_login";
             this.panel_login.Size = new System.Drawing.Size(360, 437);
             this.panel_login.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MovieHub.Properties.Resources.movie_hub_logo___white;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 160);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // linkSignUp
             // 
@@ -294,7 +275,7 @@
             // 
             // panel_signup
             // 
-            this.panel_signup.Controls.Add(label22);
+            this.panel_signup.Controls.Add(this.label22);
             this.panel_signup.Controls.Add(this.txt_email);
             this.panel_signup.Controls.Add(this.pictureBox2);
             this.panel_signup.Controls.Add(this.link_login);
@@ -307,12 +288,12 @@
             this.panel_signup.Controls.Add(this.label11);
             this.panel_signup.Controls.Add(this.groupBox3);
             this.panel_signup.Controls.Add(this.groupBox1);
-            this.panel_signup.Controls.Add(label9);
-            this.panel_signup.Controls.Add(label17);
-            this.panel_signup.Controls.Add(label16);
-            this.panel_signup.Controls.Add(label8);
-            this.panel_signup.Controls.Add(label7);
-            this.panel_signup.Controls.Add(label6);
+            this.panel_signup.Controls.Add(this.label9);
+            this.panel_signup.Controls.Add(this.label17);
+            this.panel_signup.Controls.Add(this.label16);
+            this.panel_signup.Controls.Add(this.label8);
+            this.panel_signup.Controls.Add(this.label7);
+            this.panel_signup.Controls.Add(this.label6);
             this.panel_signup.Controls.Add(this.label4);
             this.panel_signup.Controls.Add(this.label5);
             this.panel_signup.Controls.Add(this.txt_passwordSignup);
@@ -325,17 +306,6 @@
             this.panel_signup.Size = new System.Drawing.Size(984, 661);
             this.panel_signup.TabIndex = 1;
             this.panel_signup.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
-            this.pictureBox2.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(984, 66);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
             // 
             // link_login
             // 
@@ -434,7 +404,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radio_AmExpress);
             this.groupBox3.Controls.Add(this.radio_masterCard);
             this.groupBox3.Controls.Add(this.radio_visa);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -450,7 +419,7 @@
             // 
             this.radio_masterCard.AutoSize = true;
             this.radio_masterCard.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_masterCard.Location = new System.Drawing.Point(96, 26);
+            this.radio_masterCard.Location = new System.Drawing.Point(206, 26);
             this.radio_masterCard.Name = "radio_masterCard";
             this.radio_masterCard.Size = new System.Drawing.Size(102, 21);
             this.radio_masterCard.TabIndex = 6;
@@ -462,7 +431,7 @@
             // 
             this.radio_visa.AutoSize = true;
             this.radio_visa.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_visa.Location = new System.Drawing.Point(25, 26);
+            this.radio_visa.Location = new System.Drawing.Point(84, 26);
             this.radio_visa.Name = "radio_visa";
             this.radio_visa.Size = new System.Drawing.Size(54, 21);
             this.radio_visa.TabIndex = 6;
@@ -599,13 +568,13 @@
             // 
             // panel_home
             // 
-            this.panel_home.Controls.Add(this.dataGridView2);
             this.panel_home.Controls.Add(this.dataGridView1);
             this.panel_home.Controls.Add(this.label19);
             this.panel_home.Controls.Add(this.label18);
             this.panel_home.Controls.Add(this.pictureBox4);
             this.panel_home.Controls.Add(this.link_signOut);
             this.panel_home.Controls.Add(this.pictureBox_account);
+            this.panel_home.Controls.Add(this.dataGridView2);
             this.panel_home.Location = new System.Drawing.Point(0, 0);
             this.panel_home.Name = "panel_home";
             this.panel_home.Size = new System.Drawing.Size(984, 661);
@@ -622,8 +591,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(38, 195);
             this.dataGridView1.Name = "dataGridView1";
@@ -652,17 +619,6 @@
             this.label18.TabIndex = 12;
             this.label18.Text = "Favorites";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(984, 66);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
             // link_signOut
             // 
             this.link_signOut.AutoSize = true;
@@ -676,25 +632,13 @@
             this.link_signOut.TabStop = true;
             this.link_signOut.Text = "Sign Out";
             // 
-            // pictureBox_account
-            // 
-            this.pictureBox_account.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox_account.Image = global::MovieHub.Properties.Resources.profile_icon_png_898;
-            this.pictureBox_account.Location = new System.Drawing.Point(926, 86);
-            this.pictureBox_account.Name = "pictureBox_account";
-            this.pictureBox_account.Size = new System.Drawing.Size(46, 48);
-            this.pictureBox_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_account.TabIndex = 0;
-            this.pictureBox_account.TabStop = false;
-            this.pictureBox_account.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_account_MouseClick);
-            // 
             // panel_account
             // 
-            this.panel_account.Controls.Add(this.lbl_name);
             this.panel_account.Controls.Add(this.button1);
             this.panel_account.Controls.Add(this.lbl_backAccount);
             this.panel_account.Controls.Add(this.lbl_plan);
             this.panel_account.Controls.Add(this.lbl_mobileNum);
+            this.panel_account.Controls.Add(this.lbl_name);
             this.panel_account.Controls.Add(this.lbl_email);
             this.panel_account.Controls.Add(this.lbl_changePlan);
             this.panel_account.Controls.Add(this.lbl_changeMobileNum);
@@ -757,6 +701,17 @@
             this.lbl_mobileNum.TabIndex = 14;
             this.lbl_mobileNum.Text = "Mobile Number:";
             // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.ForeColor = System.Drawing.Color.White;
+            this.lbl_name.Location = new System.Drawing.Point(206, 280);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(51, 17);
+            this.lbl_name.TabIndex = 14;
+            this.lbl_name.Text = "Name:";
+            // 
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
@@ -786,7 +741,7 @@
             this.lbl_changeMobileNum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_changeMobileNum.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_changeMobileNum.ForeColor = System.Drawing.Color.Red;
-            this.lbl_changeMobileNum.Location = new System.Drawing.Point(584, 349);
+            this.lbl_changeMobileNum.Location = new System.Drawing.Point(584, 352);
             this.lbl_changeMobileNum.Name = "lbl_changeMobileNum";
             this.lbl_changeMobileNum.Size = new System.Drawing.Size(160, 17);
             this.lbl_changeMobileNum.TabIndex = 14;
@@ -798,7 +753,7 @@
             this.lbl_changePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_changePassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_changePassword.ForeColor = System.Drawing.Color.Red;
-            this.lbl_changePassword.Location = new System.Drawing.Point(584, 313);
+            this.lbl_changePassword.Location = new System.Drawing.Point(584, 314);
             this.lbl_changePassword.Name = "lbl_changePassword";
             this.lbl_changePassword.Size = new System.Drawing.Size(127, 17);
             this.lbl_changePassword.TabIndex = 14;
@@ -848,28 +803,59 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
-            // radio_AmExpress
+            // pictureBox2
             // 
-            this.radio_AmExpress.AutoSize = true;
-            this.radio_AmExpress.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_AmExpress.Location = new System.Drawing.Point(213, 26);
-            this.radio_AmExpress.Name = "radio_AmExpress";
-            this.radio_AmExpress.Size = new System.Drawing.Size(146, 21);
-            this.radio_AmExpress.TabIndex = 7;
-            this.radio_AmExpress.TabStop = true;
-            this.radio_AmExpress.Text = "American Express";
-            this.radio_AmExpress.UseVisualStyleBackColor = true;
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
+            this.pictureBox2.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(984, 66);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MovieHub.Properties.Resources.movie_hub_logo___white;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(354, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::MovieHub.Properties.Resources.movie_hub_logo_badge___orig;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(984, 66);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox_account
+            // 
+            this.pictureBox_account.Image = global::MovieHub.Properties.Resources.profile_icon_png_898;
+            this.pictureBox_account.Location = new System.Drawing.Point(926, 86);
+            this.pictureBox_account.Name = "pictureBox_account";
+            this.pictureBox_account.Size = new System.Drawing.Size(46, 48);
+            this.pictureBox_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_account.TabIndex = 0;
+            this.pictureBox_account.TabStop = false;
+            this.pictureBox_account.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_account_MouseClick);
             // 
             // label22
             // 
-            label22.AutoSize = true;
-            label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label22.ForeColor = System.Drawing.Color.White;
-            label22.Location = new System.Drawing.Point(274, 421);
-            label22.Name = "label22";
-            label22.Size = new System.Drawing.Size(45, 17);
-            label22.TabIndex = 11;
-            label22.Text = "Email";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(274, 424);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(45, 17);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Email";
             // 
             // txt_email
             // 
@@ -877,21 +863,10 @@
             this.txt_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_email.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.White;
-            this.txt_email.Location = new System.Drawing.Point(277, 449);
+            this.txt_email.Location = new System.Drawing.Point(277, 452);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(178, 25);
             this.txt_email.TabIndex = 12;
-            // 
-            // lbl_name
-            // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.ForeColor = System.Drawing.Color.White;
-            this.lbl_name.Location = new System.Drawing.Point(206, 276);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(51, 17);
-            this.lbl_name.TabIndex = 17;
-            this.lbl_name.Text = "Name:";
             // 
             // loginForm
             // 
@@ -899,12 +874,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel_home);
             this.Controls.Add(this.panel_account);
             this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
-            this.Controls.Add(this.panel_home);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "loginForm";
             this.ShowIcon = false;
@@ -912,10 +886,8 @@
             this.Text = "MovieHub";
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_signup.ResumeLayout(false);
             this.panel_signup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -924,11 +896,13 @@
             this.panel_home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_account)).EndInit();
             this.panel_account.ResumeLayout(false);
             this.panel_account.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_account)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -974,9 +948,11 @@
         private System.Windows.Forms.LinkLabel link_signOut;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel_account;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lbl_plan;
         private System.Windows.Forms.Label lbl_mobileNum;
+        private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.Label lbl_changePlan;
         private System.Windows.Forms.Label lbl_changeMobileNum;
@@ -988,10 +964,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel_account;
-        private System.Windows.Forms.RadioButton radio_AmExpress;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.Label lbl_name;
     }
 }
 
