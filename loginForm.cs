@@ -300,5 +300,10 @@ namespace MovieHub
         {
             panel_changePlan.Visible = true;
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            panel_deleteAccount.Visible = true;
+        }
     }
 }

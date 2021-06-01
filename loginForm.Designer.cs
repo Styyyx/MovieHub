@@ -733,7 +733,6 @@
             // 
             // panel_account
             // 
-            this.panel_account.Controls.Add(this.panel_deleteAccount);
             this.panel_account.Controls.Add(this.btn_delete);
             this.panel_account.Controls.Add(this.lbl_backAccount);
             this.panel_account.Controls.Add(this.lbl_plan);
@@ -766,6 +765,7 @@
             this.btn_delete.TabIndex = 16;
             this.btn_delete.Text = "Delete Account";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // lbl_backAccount
             // 
@@ -1240,6 +1240,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel_deleteAccount);
             this.Controls.Add(this.panel_account);
             this.Controls.Add(this.panel_changePlan);
             this.Controls.Add(this.panel_changeMobile);
