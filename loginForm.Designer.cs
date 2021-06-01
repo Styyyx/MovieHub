@@ -651,9 +651,9 @@
             this.label18.ForeColor = System.Drawing.Color.Red;
             this.label18.Location = new System.Drawing.Point(34, 160);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(105, 24);
+            this.label18.Size = new System.Drawing.Size(177, 24);
             this.label18.TabIndex = 12;
-            this.label18.Text = "Favorites";
+            this.label18.Text = "Movies Watched";
             // 
             // pictureBox4
             // 
