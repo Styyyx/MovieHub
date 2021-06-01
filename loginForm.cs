@@ -321,5 +321,25 @@ namespace MovieHub
         {
             dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            panel_deleteAccount.Visible = true;
+        }
+
+        private void lbl_changePassword_Click(object sender, EventArgs e)
+        {
+            panel_changePassword.Visible = true;
+        }
+
+        private void lbl_changeMobileNum_Click(object sender, EventArgs e)
+        {
+            panel_changeMobile.Visible = true;
+        }
+
+        private void lbl_changePlan_Click(object sender, EventArgs e)
+        {
+            panel_changePlan.Visible = true;
+        }
     }
 }
