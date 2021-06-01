@@ -112,11 +112,11 @@
             this.btn_savePlan = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.panel_deleteAccount = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.btn_cancelDelete = new System.Windows.Forms.Button();
             this.btn_deleteAccount = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_signup.SuspendLayout();
@@ -1137,6 +1137,7 @@
             this.btn_cancelPlan.TabIndex = 19;
             this.btn_cancelPlan.Text = "CANCEL";
             this.btn_cancelPlan.UseVisualStyleBackColor = false;
+            this.btn_cancelPlan.Click += new System.EventHandler(this.btn_cancelPlan_Click);
             // 
             // btn_savePlan
             // 
@@ -1151,6 +1152,7 @@
             this.btn_savePlan.TabIndex = 17;
             this.btn_savePlan.Text = "SAVE";
             this.btn_savePlan.UseVisualStyleBackColor = false;
+            this.btn_savePlan.Click += new System.EventHandler(this.btn_savePlan_Click);
             // 
             // label28
             // 
@@ -1177,6 +1179,28 @@
             this.panel_deleteAccount.TabIndex = 22;
             this.panel_deleteAccount.Visible = false;
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(222, 121);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(203, 17);
+            this.label31.TabIndex = 21;
+            this.label31.Text = "This action cannot be undone.";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(73, 88);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(512, 22);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Are you sure you want to delete your account on MovieHub?";
+            // 
             // btn_cancelDelete
             // 
             this.btn_cancelDelete.BackColor = System.Drawing.Color.Gray;
@@ -1190,6 +1214,7 @@
             this.btn_cancelDelete.TabIndex = 19;
             this.btn_cancelDelete.Text = "NO";
             this.btn_cancelDelete.UseVisualStyleBackColor = false;
+            this.btn_cancelDelete.Click += new System.EventHandler(this.btn_cancelDelete_Click);
             // 
             // btn_deleteAccount
             // 
@@ -1204,6 +1229,7 @@
             this.btn_deleteAccount.TabIndex = 17;
             this.btn_deleteAccount.Text = "YES";
             this.btn_deleteAccount.UseVisualStyleBackColor = false;
+            this.btn_deleteAccount.Click += new System.EventHandler(this.btn_deleteAccount_Click);
             // 
             // label27
             // 
@@ -1216,42 +1242,20 @@
             this.label27.TabIndex = 14;
             this.label27.Text = "Delete MovieHub Account";
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(73, 88);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(512, 22);
-            this.label30.TabIndex = 20;
-            this.label30.Text = "Are you sure you want to delete your account on MovieHub?";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(222, 121);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(203, 17);
-            this.label31.TabIndex = 21;
-            this.label31.Text = "This action cannot be undone.";
-            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.panel_deleteAccount);
-            this.Controls.Add(this.panel_account);
             this.Controls.Add(this.panel_changePlan);
             this.Controls.Add(this.panel_changeMobile);
             this.Controls.Add(this.panel_changePassword);
             this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
             this.Controls.Add(this.panel_home);
+            this.Controls.Add(this.panel_deleteAccount);
+            this.Controls.Add(this.panel_account);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "loginForm";

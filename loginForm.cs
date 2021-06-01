@@ -321,5 +321,85 @@ namespace MovieHub
         {
             dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            panel_deleteAccount.Visible = true;
+        }
+        private void lbl_changePlan_Click(object sender, EventArgs e)
+        {
+            panel_changePlan.Visible = true;
+        }
+        private void lbl_changeMobileNum_Click(object sender, EventArgs e)
+        {
+            panel_changeMobile.Visible = true;
+        }
+        private void lbl_changePassword_Click(object sender, EventArgs e)
+        {
+            panel_changePassword.Visible = true;
+        }
+
+        private void btn_cancelDelete_Click(object sender, EventArgs e)
+        {
+            panel_deleteAccount.Visible = false;
+        }
+
+        private void btn_deleteAccount_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = "DELETE FROM login WHERE client_id = @clientId";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@clientId", sessionClientId);
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                query = "DELETE FROM client WHERE client_id = @clientId";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@clientId", sessionClientId);
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            panel_deleteAccount.Visible = false;
+            panel_account.Visible = false;
+            panel_login.Visible = true;
+        }
+
+        private void btn_cancelPlan_Click(object sender, EventArgs e)
+        {
+            panel_changePlan.Visible = false;
+        }
+
+        private void btn_savePlan_Click(object sender, EventArgs e)
+        {
+            string newPlan = "";
+            newPlan = groupBox2.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked).Text;
+            if (newPlan != "")
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "UPDATE transactions";
+                }
+            }
+        }
     }
 }
