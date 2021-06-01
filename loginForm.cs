@@ -15,6 +15,7 @@ namespace MovieHub
     {
         private string connStr = "Data Source=.;Initial Catalog=MovieHub;Integrated Security=True";
         private int sessionClientId;
+        //SqlDataAdapter watchedTableDA;
 
         public loginForm()
         {
@@ -64,17 +65,19 @@ namespace MovieHub
 
                 using (SqlDataAdapter sqlDA = new SqlDataAdapter(query, conn))
                 {
-                    DataTable table = new DataTable();
-                    sqlDA.Fill(table);
-                    dataGridView2.DataSource = table;
+                    DataTable t = new DataTable();
+                    sqlDA.Fill(t);
+                    dataGridView2.DataSource = t;
                 }
-                query = $"SELECT * FROM favorites WHERE client_id = {sessionClientId}";
+                query = $"SELECT w.movie_id, m.name, w.favorite FROM watched as w INNER JOIN movieLibrary as m ON w.movie_id = m.movie_id WHERE w.client_id = {sessionClientId}";
+
                 using (SqlDataAdapter sqlDA = new SqlDataAdapter(query, conn))
                 {
                     DataTable table = new DataTable();
-                    table.Columns.Add("Favorites", typeof(bool));
                     sqlDA.Fill(table);
                     dataGridView1.DataSource = table;
+                    dataGridView1.Columns["movie_id"].ReadOnly = true;
+                    dataGridView1.Columns["name"].ReadOnly = true;
                 }
             }
         }
@@ -248,7 +251,7 @@ namespace MovieHub
                         MessageBox.Show(ex.Message);
                         conn.Close();
                     }
-                    
+
                 }
                 query = "SELECT plan_name FROM transactions WHERE client_id = @clientID";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -284,6 +287,39 @@ namespace MovieHub
             panel_home.Visible = false;
             txt_usernameLogin.Text = "";
             txt_passwordLogin.Text = "";
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            string query = "UPDATE watched SET favorite=@value WHERE client_id=@clientId AND movie_id=@movieId";
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    int rowIndex = e.RowIndex;
+                    int movieId = (int)dataGridView1.Rows[rowIndex].Cells["movie_id"].Value;
+                    Boolean value = (Boolean)dataGridView1.Rows[rowIndex].Cells["favorite"].Value;
+                    cmd.Parameters.AddWithValue("@value", value);
+                    cmd.Parameters.AddWithValue("@clientId", sessionClientId);
+                    cmd.Parameters.AddWithValue("@movieId", movieId);
+
+                    try
+                    {
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
         }
     }
 }
