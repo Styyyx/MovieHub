@@ -276,5 +276,11 @@ namespace MovieHub
             panel_account.Visible = false;
             loadHomePanel();
         }
+
+        private void link_signOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panel_login.Visible = true;
+            panel_home.Visible = false;
+        }
     }
 }

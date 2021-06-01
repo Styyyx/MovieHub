@@ -564,6 +564,7 @@
             this.txt_passwordSignup.Name = "txt_passwordSignup";
             this.txt_passwordSignup.Size = new System.Drawing.Size(178, 25);
             this.txt_passwordSignup.TabIndex = 4;
+            this.txt_passwordSignup.UseSystemPasswordChar = true;
             // 
             // txt_mobileNum
             // 
@@ -677,6 +678,7 @@
             this.link_signOut.TabIndex = 10;
             this.link_signOut.TabStop = true;
             this.link_signOut.Text = "Sign Out";
+            this.link_signOut.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_signOut_LinkClicked);
             // 
             // pictureBox_account
             // 
@@ -876,10 +878,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.panel_account);
             this.Controls.Add(this.panel_home);
-            this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
+            this.Controls.Add(this.panel_login);
+            this.Controls.Add(this.panel_account);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "loginForm";
