@@ -285,5 +285,10 @@ namespace MovieHub
             txt_usernameLogin.Text = "";
             txt_passwordLogin.Text = "";
         }
+
+        private void lbl_changePassword_Click(object sender, EventArgs e)
+        {
+            panel_changePassword.Visible = true;
+        }
     }
 }
