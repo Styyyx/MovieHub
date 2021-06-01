@@ -78,7 +78,7 @@
             this.pictureBox_account = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel_account = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.lbl_backAccount = new System.Windows.Forms.Label();
             this.lbl_plan = new System.Windows.Forms.Label();
             this.lbl_mobileNum = new System.Windows.Forms.Label();
@@ -92,11 +92,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel_changePassword = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txt_newEmail = new System.Windows.Forms.TextBox();
-            this.btn_savePassword = new System.Windows.Forms.Button();
             this.btn_cancelPassword = new System.Windows.Forms.Button();
+            this.btn_savePassword = new System.Windows.Forms.Button();
+            this.txt_newEmail = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel_changeMobile = new System.Windows.Forms.Panel();
             this.btn_cancelMobile = new System.Windows.Forms.Button();
             this.btn_saveMobile = new System.Windows.Forms.Button();
@@ -104,13 +104,19 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel_changePlan = new System.Windows.Forms.Panel();
-            this.btn_cancelPlan = new System.Windows.Forms.Button();
-            this.btn_savePlan = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.btn_cancelPlan = new System.Windows.Forms.Button();
+            this.btn_savePlan = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel_deleteAccount = new System.Windows.Forms.Panel();
+            this.btn_cancelDelete = new System.Windows.Forms.Button();
+            this.btn_deleteAccount = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_signup.SuspendLayout();
@@ -128,6 +134,7 @@
             this.panel_changeMobile.SuspendLayout();
             this.panel_changePlan.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel_deleteAccount.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -726,7 +733,8 @@
             // 
             // panel_account
             // 
-            this.panel_account.Controls.Add(this.button1);
+            this.panel_account.Controls.Add(this.panel_deleteAccount);
+            this.panel_account.Controls.Add(this.btn_delete);
             this.panel_account.Controls.Add(this.lbl_backAccount);
             this.panel_account.Controls.Add(this.lbl_plan);
             this.panel_account.Controls.Add(this.lbl_mobileNum);
@@ -745,19 +753,19 @@
             this.panel_account.TabIndex = 13;
             this.panel_account.Visible = false;
             // 
-            // button1
+            // btn_delete
             // 
-            this.button1.BackColor = System.Drawing.Color.Gray;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(587, 515);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 37);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Delete Account";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_delete.BackColor = System.Drawing.Color.Gray;
+            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Location = new System.Drawing.Point(587, 515);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(227, 37);
+            this.btn_delete.TabIndex = 16;
+            this.btn_delete.Text = "Delete Account";
+            this.btn_delete.UseVisualStyleBackColor = false;
             // 
             // lbl_backAccount
             // 
@@ -913,38 +921,19 @@
             this.panel_changePassword.TabIndex = 17;
             this.panel_changePassword.Visible = false;
             // 
-            // label23
+            // btn_cancelPassword
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(46, 55);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(193, 24);
-            this.label23.TabIndex = 14;
-            this.label23.Text = "Change Password";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(90, 112);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(111, 17);
-            this.label24.TabIndex = 15;
-            this.label24.Text = "New Password:";
-            // 
-            // txt_newEmail
-            // 
-            this.txt_newEmail.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txt_newEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_newEmail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_newEmail.ForeColor = System.Drawing.Color.White;
-            this.txt_newEmail.Location = new System.Drawing.Point(207, 106);
-            this.txt_newEmail.Name = "txt_newEmail";
-            this.txt_newEmail.Size = new System.Drawing.Size(227, 25);
-            this.txt_newEmail.TabIndex = 16;
+            this.btn_cancelPassword.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelPassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelPassword.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelPassword.Location = new System.Drawing.Point(281, 166);
+            this.btn_cancelPassword.Name = "btn_cancelPassword";
+            this.btn_cancelPassword.Size = new System.Drawing.Size(153, 37);
+            this.btn_cancelPassword.TabIndex = 19;
+            this.btn_cancelPassword.Text = "CANCEL";
+            this.btn_cancelPassword.UseVisualStyleBackColor = false;
             // 
             // btn_savePassword
             // 
@@ -960,19 +949,38 @@
             this.btn_savePassword.Text = "SAVE";
             this.btn_savePassword.UseVisualStyleBackColor = false;
             // 
-            // btn_cancelPassword
+            // txt_newEmail
             // 
-            this.btn_cancelPassword.BackColor = System.Drawing.Color.Gray;
-            this.btn_cancelPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelPassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelPassword.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelPassword.Location = new System.Drawing.Point(281, 166);
-            this.btn_cancelPassword.Name = "btn_cancelPassword";
-            this.btn_cancelPassword.Size = new System.Drawing.Size(153, 37);
-            this.btn_cancelPassword.TabIndex = 19;
-            this.btn_cancelPassword.Text = "CANCEL";
-            this.btn_cancelPassword.UseVisualStyleBackColor = false;
+            this.txt_newEmail.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txt_newEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_newEmail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_newEmail.ForeColor = System.Drawing.Color.White;
+            this.txt_newEmail.Location = new System.Drawing.Point(207, 106);
+            this.txt_newEmail.Name = "txt_newEmail";
+            this.txt_newEmail.Size = new System.Drawing.Size(227, 25);
+            this.txt_newEmail.TabIndex = 16;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(90, 112);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(111, 17);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "New Password:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(46, 55);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(193, 24);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Change Password";
             // 
             // panel_changeMobile
             // 
@@ -1062,45 +1070,6 @@
             this.panel_changePlan.TabIndex = 21;
             this.panel_changePlan.Visible = false;
             // 
-            // btn_cancelPlan
-            // 
-            this.btn_cancelPlan.BackColor = System.Drawing.Color.Gray;
-            this.btn_cancelPlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelPlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelPlan.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelPlan.Location = new System.Drawing.Point(292, 179);
-            this.btn_cancelPlan.Name = "btn_cancelPlan";
-            this.btn_cancelPlan.Size = new System.Drawing.Size(153, 37);
-            this.btn_cancelPlan.TabIndex = 19;
-            this.btn_cancelPlan.Text = "CANCEL";
-            this.btn_cancelPlan.UseVisualStyleBackColor = false;
-            // 
-            // btn_savePlan
-            // 
-            this.btn_savePlan.BackColor = System.Drawing.Color.Red;
-            this.btn_savePlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_savePlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_savePlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_savePlan.ForeColor = System.Drawing.Color.White;
-            this.btn_savePlan.Location = new System.Drawing.Point(72, 179);
-            this.btn_savePlan.Name = "btn_savePlan";
-            this.btn_savePlan.Size = new System.Drawing.Size(153, 37);
-            this.btn_savePlan.TabIndex = 17;
-            this.btn_savePlan.Text = "SAVE";
-            this.btn_savePlan.UseVisualStyleBackColor = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Red;
-            this.label28.Location = new System.Drawing.Point(47, 40);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(272, 24);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "Change Subscription Plan";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.radioButton1);
@@ -1151,6 +1120,120 @@
             this.radioButton3.Text = "Basic";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // btn_cancelPlan
+            // 
+            this.btn_cancelPlan.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelPlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelPlan.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelPlan.Location = new System.Drawing.Point(292, 179);
+            this.btn_cancelPlan.Name = "btn_cancelPlan";
+            this.btn_cancelPlan.Size = new System.Drawing.Size(153, 37);
+            this.btn_cancelPlan.TabIndex = 19;
+            this.btn_cancelPlan.Text = "CANCEL";
+            this.btn_cancelPlan.UseVisualStyleBackColor = false;
+            // 
+            // btn_savePlan
+            // 
+            this.btn_savePlan.BackColor = System.Drawing.Color.Red;
+            this.btn_savePlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_savePlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_savePlan.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_savePlan.ForeColor = System.Drawing.Color.White;
+            this.btn_savePlan.Location = new System.Drawing.Point(72, 179);
+            this.btn_savePlan.Name = "btn_savePlan";
+            this.btn_savePlan.Size = new System.Drawing.Size(153, 37);
+            this.btn_savePlan.TabIndex = 17;
+            this.btn_savePlan.Text = "SAVE";
+            this.btn_savePlan.UseVisualStyleBackColor = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.Red;
+            this.label28.Location = new System.Drawing.Point(47, 40);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(272, 24);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "Change Subscription Plan";
+            // 
+            // panel_deleteAccount
+            // 
+            this.panel_deleteAccount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_deleteAccount.Controls.Add(this.label31);
+            this.panel_deleteAccount.Controls.Add(this.label30);
+            this.panel_deleteAccount.Controls.Add(this.btn_cancelDelete);
+            this.panel_deleteAccount.Controls.Add(this.btn_deleteAccount);
+            this.panel_deleteAccount.Controls.Add(this.label27);
+            this.panel_deleteAccount.Location = new System.Drawing.Point(145, 214);
+            this.panel_deleteAccount.Name = "panel_deleteAccount";
+            this.panel_deleteAccount.Size = new System.Drawing.Size(669, 258);
+            this.panel_deleteAccount.TabIndex = 22;
+            this.panel_deleteAccount.Visible = false;
+            // 
+            // btn_cancelDelete
+            // 
+            this.btn_cancelDelete.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelDelete.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelDelete.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelDelete.Location = new System.Drawing.Point(335, 173);
+            this.btn_cancelDelete.Name = "btn_cancelDelete";
+            this.btn_cancelDelete.Size = new System.Drawing.Size(153, 37);
+            this.btn_cancelDelete.TabIndex = 19;
+            this.btn_cancelDelete.Text = "NO";
+            this.btn_cancelDelete.UseVisualStyleBackColor = false;
+            // 
+            // btn_deleteAccount
+            // 
+            this.btn_deleteAccount.BackColor = System.Drawing.Color.Red;
+            this.btn_deleteAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_deleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_deleteAccount.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deleteAccount.ForeColor = System.Drawing.Color.White;
+            this.btn_deleteAccount.Location = new System.Drawing.Point(149, 173);
+            this.btn_deleteAccount.Name = "btn_deleteAccount";
+            this.btn_deleteAccount.Size = new System.Drawing.Size(153, 37);
+            this.btn_deleteAccount.TabIndex = 17;
+            this.btn_deleteAccount.Text = "YES";
+            this.btn_deleteAccount.UseVisualStyleBackColor = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(39, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(269, 24);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Delete MovieHub Account";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Location = new System.Drawing.Point(73, 88);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(512, 22);
+            this.label30.TabIndex = 20;
+            this.label30.Text = "Are you sure you want to delete your account on MovieHub?";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(222, 121);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(203, 17);
+            this.label31.TabIndex = 21;
+            this.label31.Text = "This action cannot be undone.";
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1197,6 +1280,8 @@
             this.panel_changePlan.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel_deleteAccount.ResumeLayout(false);
+            this.panel_deleteAccount.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1255,7 +1340,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label lbl_backAccount;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
@@ -1286,6 +1371,12 @@
         private System.Windows.Forms.Button btn_cancelPlan;
         private System.Windows.Forms.Button btn_savePlan;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Panel panel_deleteAccount;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button btn_cancelDelete;
+        private System.Windows.Forms.Button btn_deleteAccount;
+        private System.Windows.Forms.Label label27;
     }
 }
 
