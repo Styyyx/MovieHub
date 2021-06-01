@@ -94,7 +94,7 @@
             this.panel_changePassword = new System.Windows.Forms.Panel();
             this.btn_cancelPassword = new System.Windows.Forms.Button();
             this.btn_savePassword = new System.Windows.Forms.Button();
-            this.txt_newEmail = new System.Windows.Forms.TextBox();
+            this.txt_newPassword = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel_changeMobile = new System.Windows.Forms.Panel();
@@ -916,7 +916,7 @@
             this.panel_changePassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_changePassword.Controls.Add(this.btn_cancelPassword);
             this.panel_changePassword.Controls.Add(this.btn_savePassword);
-            this.panel_changePassword.Controls.Add(this.txt_newEmail);
+            this.panel_changePassword.Controls.Add(this.txt_newPassword);
             this.panel_changePassword.Controls.Add(this.label24);
             this.panel_changePassword.Controls.Add(this.label23);
             this.panel_changePassword.Location = new System.Drawing.Point(215, 214);
@@ -938,6 +938,7 @@
             this.btn_cancelPassword.TabIndex = 19;
             this.btn_cancelPassword.Text = "CANCEL";
             this.btn_cancelPassword.UseVisualStyleBackColor = false;
+            this.btn_cancelPassword.Click += new System.EventHandler(this.btn_cancelPassword_Click);
             // 
             // btn_savePassword
             // 
@@ -952,17 +953,18 @@
             this.btn_savePassword.TabIndex = 17;
             this.btn_savePassword.Text = "SAVE";
             this.btn_savePassword.UseVisualStyleBackColor = false;
+            this.btn_savePassword.Click += new System.EventHandler(this.btn_savePassword_Click);
             // 
-            // txt_newEmail
+            // txt_newPassword
             // 
-            this.txt_newEmail.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txt_newEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_newEmail.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_newEmail.ForeColor = System.Drawing.Color.White;
-            this.txt_newEmail.Location = new System.Drawing.Point(207, 106);
-            this.txt_newEmail.Name = "txt_newEmail";
-            this.txt_newEmail.Size = new System.Drawing.Size(227, 25);
-            this.txt_newEmail.TabIndex = 16;
+            this.txt_newPassword.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txt_newPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_newPassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_newPassword.ForeColor = System.Drawing.Color.White;
+            this.txt_newPassword.Location = new System.Drawing.Point(207, 106);
+            this.txt_newPassword.Name = "txt_newPassword";
+            this.txt_newPassword.Size = new System.Drawing.Size(227, 25);
+            this.txt_newPassword.TabIndex = 16;
             // 
             // label24
             // 
@@ -1013,6 +1015,7 @@
             this.btn_cancelMobile.TabIndex = 19;
             this.btn_cancelMobile.Text = "CANCEL";
             this.btn_cancelMobile.UseVisualStyleBackColor = false;
+            this.btn_cancelMobile.Click += new System.EventHandler(this.btn_cancelMobile_Click);
             // 
             // btn_saveMobile
             // 
@@ -1027,6 +1030,7 @@
             this.btn_saveMobile.TabIndex = 17;
             this.btn_saveMobile.Text = "SAVE";
             this.btn_saveMobile.UseVisualStyleBackColor = false;
+            this.btn_saveMobile.Click += new System.EventHandler(this.btn_saveMobile_Click);
             // 
             // txt_newMobile
             // 
@@ -1248,14 +1252,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(9)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.panel_changePlan);
-            this.Controls.Add(this.panel_changeMobile);
-            this.Controls.Add(this.panel_changePassword);
             this.Controls.Add(this.panel_login);
             this.Controls.Add(this.panel_signup);
             this.Controls.Add(this.panel_home);
             this.Controls.Add(this.panel_deleteAccount);
             this.Controls.Add(this.panel_account);
+            this.Controls.Add(this.panel_changePlan);
+            this.Controls.Add(this.panel_changeMobile);
+            this.Controls.Add(this.panel_changePassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "loginForm";
@@ -1362,7 +1366,7 @@
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Panel panel_changePassword;
         private System.Windows.Forms.Button btn_savePassword;
-        private System.Windows.Forms.TextBox txt_newEmail;
+        private System.Windows.Forms.TextBox txt_newPassword;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btn_cancelPassword;

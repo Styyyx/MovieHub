@@ -395,11 +395,123 @@ namespace MovieHub
             newPlan = groupBox2.Controls.OfType<RadioButton>().FirstOrDefault(n => n.Checked).Text;
             if (newPlan != "")
             {
+                Decimal newPrice = 0m;
+                if (newPlan == "Basic") { newPrice = 169m; }
+                else if (newPlan == "Standard") { newPrice = 369m; }
+                else { newPrice = 469m; }
+                DateTime newStart = DateTime.Today.Date;
+                DateTime newEnd = newStart.AddMonths(1).Date;
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
-                    string query = "UPDATE transactions";
+                    string query = "UPDATE transactions SET plan_name = @newName, plan_price = @newPrice, sub_start = @newStart, sub_end = @newEnd WHERE client_id = @clientId";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@newName", newPlan);
+                        cmd.Parameters.AddWithValue("@newPrice", newPrice);
+                        cmd.Parameters.AddWithValue("@newStart", newStart);
+                        cmd.Parameters.AddWithValue("@newEnd", newEnd);
+                        cmd.Parameters.AddWithValue("@clientId", sessionClientId);
+                        try
+                        {
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            panel_changePlan.Visible = false;
+                            loadAccountPanel();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Please select plan before saving");
+            }
+        }
+
+        private void btn_saveMobile_Click(object sender, EventArgs e)
+        {
+            string newMobile = "";
+            newMobile = txt_newMobile.Text;
+            if (newMobile != "")
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "UPDATE client SET mobile = @newMobile WHERE client_id = @clientId";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@newMobile", newMobile);
+                        cmd.Parameters.AddWithValue("clientId", sessionClientId);
+
+                        try
+                        {
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            panel_changeMobile.Visible = false;
+                            loadAccountPanel();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Input");
+                panel_changeMobile.Visible = false;
+            }
+        }
+
+        private void btn_cancelMobile_Click(object sender, EventArgs e)
+        {
+            panel_changeMobile.Visible = false;
+        }
+
+        private void btn_savePassword_Click(object sender, EventArgs e)
+        {
+            string newPW = "";
+            newPW = txt_newPassword.Text;
+            if (newPW != "")
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string query = "UPDATE login SET password = @newPW WHERE client_id = @clientId";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@newPW", newPW);
+                        cmd.Parameters.AddWithValue("clientId", sessionClientId);
+
+                        try
+                        {
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            panel_changePassword.Visible = false;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Input");
+                panel_changePassword.Visible = false;
+            }
+        }
+
+        private void btn_cancelPassword_Click(object sender, EventArgs e)
+        {
+            panel_changePassword.Visible = false;
         }
     }
 }
