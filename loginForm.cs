@@ -65,6 +65,7 @@ namespace MovieHub
                 using (SqlDataAdapter sqlDA = new SqlDataAdapter(query, conn))
                 {
                     DataTable table = new DataTable();
+                    table.Columns.Add("Favorites", typeof(bool));
                     sqlDA.Fill(table);
                     dataGridView2.DataSource = table;
                 }
