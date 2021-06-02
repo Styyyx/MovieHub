@@ -65,10 +65,6 @@ namespace MovieHub
 
                 using (SqlDataAdapter sqlDA = new SqlDataAdapter(query, conn))
                 {
-                    DataGridViewCheckBoxColumn watched = new DataGridViewCheckBoxColumn();
-                    dataGridView2.Columns.Add(watched);
-                    watched.HeaderText = "watched";
-                    watched.Name = "watched";
                     DataTable t = new DataTable();
                     sqlDA.Fill(t);
                     dataGridView2.DataSource = t;
@@ -86,7 +82,7 @@ namespace MovieHub
                     dataGridView2.Columns["rating_imdb"].ReadOnly = true;
                     dataGridView2.Columns["rating_rotten"].ReadOnly = true;
 
-                    
+
                 }
 
                 query = $"SELECT w.movie_id, m.name, w.favorite FROM watched as w INNER JOIN movieLibrary as m ON w.movie_id = m.movie_id WHERE w.client_id = {sessionClientId}";
@@ -536,54 +532,35 @@ namespace MovieHub
 
         private void btn_addWatched_Click(object sender, EventArgs e)
         {
+            int selectedMovieId = (int)dataGridView2.CurrentRow.Cells["movie_id"].Value;
+            string selectedMovieName = dataGridView2.CurrentRow.Cells["name"].Value.ToString();
+            
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[0].Value.Equals(selectedMovieId)) { return; }
+            }
+
             using (SqlConnection conn = new SqlConnection(connStr))
             {
-                string query = "INSERT INTO watched VALUES(client_id = {sessionClientId},@movie_id,@name)";
+                string query = "INSERT INTO watched(client_id, movie_id) VALUES(@clientId,@movieId)";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("clientId", sessionClientId);
-
+                    cmd.Parameters.AddWithValue("@clientId", sessionClientId);
+                    cmd.Parameters.AddWithValue("@movieId", selectedMovieId);
                     try
                     {
-                        for (int i = 0; i <= dataGridView2.Rows.Count - 1; i++)
-                        {
-                            bool rowAlreadyExist = false;
-                            bool checkedCell = (bool)dataGridView2.Rows[i].Cells[0].Value;
-                            if (checkedCell == true)
-                            {
-                                DataGridViewRow row = dataGridView2.Rows[i];
-
-                                //for (int j = 0; j <= dataGridView1.Rows.Count - 1; j++)
-                                //{
-                                //    if (row.Cells[0].Value.ToString() == dataGridView1.Rows[j].Cells[0].Value.ToString())
-                                //    {
-                                //        rowAlreadyExist = true;
-                                //        break;
-                                //    }
-                                //}
-
-                                if (rowAlreadyExist == false)
-                                {
-                                    //int movie_id = dataGridView1.Rows.Add(row.Cells[1].Value.ToString());
-                                    int movie_id = (int)dataGridView1.Rows[i].Cells[1].Value;
-                                    string name = (string)dataGridView1.Rows[i].Cells[2].Value;
-                                    //string name = dataGridView1.Rows.Add(row.Cells[2].Value.ToString()).ToString();
-
-                                    cmd.Parameters.AddWithValue("movie_id", movie_id);
-                                    cmd.Parameters.AddWithValue("name", name);
-                                }
-                            }
-                        }
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    conn.Close();
+
                 }
             }
-
-            
+            loadHomePanel();
         }
     }
 }

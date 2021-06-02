@@ -1,0 +1,9 @@
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\bin\Release\MovieHub.exe.config
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\bin\Release\MovieHub.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\bin\Release\MovieHub.pdb
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Release\MovieHub.csprojAssemblyReference.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Release\MovieHub.loginForm.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Release\MovieHub.Properties.Resources.resources
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Release\MovieHub.csproj.GenerateResource.cache
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Release\MovieHub.exe
+C:\Users\perry\Desktop\School\2nd Year - 2nd Sem\Info Mgt\MovieHub\obj\Release\MovieHub.pdb
