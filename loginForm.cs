@@ -548,24 +548,26 @@ namespace MovieHub
                         for (int i = 0; i <= dataGridView2.Rows.Count - 1; i++)
                         {
                             bool rowAlreadyExist = false;
-                            bool checkedCell = (bool)dataGridView2.Rows[i].Cells[3].Value;
+                            bool checkedCell = (bool)dataGridView2.Rows[i].Cells[0].Value;
                             if (checkedCell == true)
                             {
                                 DataGridViewRow row = dataGridView2.Rows[i];
 
-                                for (int j = 0; j <= dataGridView1.Rows.Count - 1; j++)
-                                {
-                                    if (row.Cells[0].Value.ToString() == dataGridView1.Rows[j].Cells[0].Value.ToString())
-                                    {
-                                        rowAlreadyExist = true;
-                                        break;
-                                    }
-                                }
+                                //for (int j = 0; j <= dataGridView1.Rows.Count - 1; j++)
+                                //{
+                                //    if (row.Cells[0].Value.ToString() == dataGridView1.Rows[j].Cells[0].Value.ToString())
+                                //    {
+                                //        rowAlreadyExist = true;
+                                //        break;
+                                //    }
+                                //}
 
                                 if (rowAlreadyExist == false)
                                 {
-                                    int movie_id = dataGridView1.Rows.Add(row.Cells[1].Value.ToString());
-                                    string name = dataGridView1.Rows.Add(row.Cells[2].Value.ToString()).ToString();
+                                    //int movie_id = dataGridView1.Rows.Add(row.Cells[1].Value.ToString());
+                                    int movie_id = (int)dataGridView1.Rows[i].Cells[1].Value;
+                                    string name = (string)dataGridView1.Rows[i].Cells[2].Value;
+                                    //string name = dataGridView1.Rows.Add(row.Cells[2].Value.ToString()).ToString();
 
                                     cmd.Parameters.AddWithValue("movie_id", movie_id);
                                     cmd.Parameters.AddWithValue("name", name);
